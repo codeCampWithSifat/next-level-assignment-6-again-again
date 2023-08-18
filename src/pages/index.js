@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import RootLayout from '@/components/layout/RootLayout'
-import React from 'react'
+import AllProduct from '@/components/UI/AllProduct'
+import RootLayout from './components/layout/RootLayout'
 
-const HomePage = () => {
+const HomePage = ({allProducts}) => {
   return (
    <>
      <div className="hero h-[1000px] mt-25  bg-base-100">
@@ -28,6 +28,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <AllProduct allProducts={allProducts}/>
    </>
   )
 }
@@ -38,4 +39,15 @@ HomePage.getLayout = function getLayout (page) {
   return (
     <RootLayout>{page}</RootLayout>
   )
+}
+
+export const getStaticProps = async () => {
+  const res = await fetch(`http://localhost:3000/api/allProducts`);
+  const data = await res.json() ;
+  // console.log(data);
+  return {
+    props: {
+      allProducts:data
+    }
+  }
 }
