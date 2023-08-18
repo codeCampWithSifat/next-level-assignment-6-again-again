@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-
 import Link from "next/link";
+import React from "react";
 
 const SingleProduct = ({ product }) => {
-  // console.log(product);
   return (
     <div className="card  bg-base-100 shadow-xl">
       <div className="card-body items-center text-center">
@@ -18,6 +17,7 @@ const SingleProduct = ({ product }) => {
         </Link>
       </div>
     </div>
+    
   );
 };
 

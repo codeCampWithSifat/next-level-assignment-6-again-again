@@ -85,17 +85,17 @@ const RootLayout = ({ children }) => {
             Pc Builder
           </Link>
         </div>
-      
+       
           <li>
             <Link className="btn btn-primary mx-2" href="/login">
               Login
             </Link>
           </li>
-      
-          <button  className="btn btn-error mx-2">
+        
+          <button className="btn btn-error mx-2">
             Logout
           </button>
-        
+    
       </div>
 
       {/*  */}

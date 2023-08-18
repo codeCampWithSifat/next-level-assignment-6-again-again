@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import AllProduct from './components/UI/AllProduct'
-import RootLayout from './components/layout/RootLayout'
+import AllProduct from '@/components/UI/AllProduct'
+import RootLayout from '@/components/layout/RootLayout'
+// import AllProduct from './components/UI/AllProduct'
 
 const HomePage = ({allProducts}) => {
   return (
